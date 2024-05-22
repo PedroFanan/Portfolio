@@ -96,7 +96,7 @@ h2 {
 .image-column {
     flex: 0 0 auto;
     position: relative;
-    right: -50px;
+    right: -5px;
 }
 
 .image-column img {
@@ -162,6 +162,19 @@ button {
 
 button:hover {
     background: #555;
+}
+
+/* Contato */
+.side-by-side{
+    flex: 1; /* Cada section ocupa um espaço igual */
+    min-width: 300px; /* Define uma largura mínima para as sections */
+    margin: 10px;
+}
+
+.side-by-side-container {
+    display: flex;
+    justify-content: space-between; /* Espaço entre as sections */
+    flex-wrap: wrap; /* Permite que as sections quebrem linha se necessário */
 }
 
 /* Redes Sociais */

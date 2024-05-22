@@ -5,10 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", () => {
         let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         if (scrollTop > lastScrollTop) {
-            // Scrolling down
-            navbar.style.top = "-150px"; // Ajuste a altura com base na altura do seu cabeçalho
+            navbar.style.top = "-150px"; 
         } else {
-            // Scrolling up
             navbar.style.top = "0";
         }
         lastScrollTop = scrollTop;

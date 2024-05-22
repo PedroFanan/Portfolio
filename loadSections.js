@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     loadSection("sobre", "sobre.html");
     loadSection("projetos", "projetos.html");
+    loadSection("formulario", "formulario.html");
     loadSection("contato", "contato.html");
 
     document.querySelectorAll('nav ul li a').forEach(anchor => {
