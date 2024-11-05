@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35027.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystemLawyer.Server", "SystemLawyer.Server\SystemLawyer.Server.csproj", "{283867C1-F30F-42CB-A647-C4E812D5F4F7}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "systemlawyer.client", "systemlawyer.client\systemlawyer.client.esproj", "{B01BF226-31F2-4331-B994-582CCDFF280D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{283867C1-F30F-42CB-A647-C4E812D5F4F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{283867C1-F30F-42CB-A647-C4E812D5F4F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{283867C1-F30F-42CB-A647-C4E812D5F4F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{283867C1-F30F-42CB-A647-C4E812D5F4F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B01BF226-31F2-4331-B994-582CCDFF280D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B01BF226-31F2-4331-B994-582CCDFF280D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B01BF226-31F2-4331-B994-582CCDFF280D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{B01BF226-31F2-4331-B994-582CCDFF280D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B01BF226-31F2-4331-B994-582CCDFF280D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B01BF226-31F2-4331-B994-582CCDFF280D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6819571D-BC31-43D0-AA0D-55350F4BAC1D}
+	EndGlobalSection
+EndGlobal

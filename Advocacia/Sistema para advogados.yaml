@@ -1,0 +1,15 @@
+Sistema para advogados
+
+-Criar um sistema estilo ao que a Lais fez para a Descontabeis
+    -Deve ter tela de login
+    -Tela para importar notas e documentos dos clientes
+    -Cadastro de usuarios e suas funcionalidades
+    -cadastro de clientes
+    -integração com outras plataformas de advocacia, para poder ver andamento de processos
+    -Ter layout mobile
+    -Pode ser um sistema inicializado com o pc, a onde o advogado terá acesso apenas a ele.
+
+Tecnologias:
+Front: Angular
+Back: C#
+Mobile: pesquisar
