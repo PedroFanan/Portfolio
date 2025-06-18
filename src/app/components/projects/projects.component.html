@@ -1,0 +1,18 @@
+<section class="projects">
+  <h1>Meus Projetos</h1>
+  <div class="project-list">
+    <div class="project-card" (click)="openProject(project)" *ngFor="let project of projects">
+      <h2>{{ project.title }}</h2>
+      <p>{{ project.shortDescription }}</p>
+    </div>
+  </div>
+</section>
+
+<div class="project-modal" *ngIf="selectedProject">
+  <div class="modal-content">
+    <button class="close-button" (click)="closeModal()">×</button>
+    <h2>{{ selectedProject.title }}</h2>
+    <p>{{ selectedProject.fullDescription }}</p>
+    <a *ngIf="selectedProject.link" [href]="selectedProject.link" target="_blank">Ver Projeto</a>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<button class="menu-toggle-btn" (click)="toggleSidebar()">
+  <i class="bi bi-list"></i>
+</button>
+
+<div class="sidebar" [class.open]="isSidebarOpen">
+  <div class="sidebar-header">
+    <h3 class="gradient-text">Pedro Fanan</h3>
+    <button class="close-btn" (click)="toggleSidebar()">
+      <i class="bi bi-x-lg"></i>
+    </button>
+  </div>
+  <ul class="sidebar-nav">
+    <li><a href="#about" (click)="toggleSidebar()">Sobre</a></li>
+    <li><a href="#projects" (click)="toggleSidebar()">Projetos</a></li>
+    <li><a href="#contact" (click)="toggleSidebar()">Contato</a></li>
+  </ul>
+</div>
+
+<div class="sidebar-overlay" *ngIf="isSidebarOpen" (click)="toggleSidebar()"></div>
