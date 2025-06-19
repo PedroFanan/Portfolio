@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ComponentsModule } from './module/components.module';
 import { Title } from '@angular/platform-browser';
 import { TranslatePipe } from './pipes/translate.pipe';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -19,7 +18,7 @@ import { HeaderComponent } from './components/header/header.component';
       ProjectsComponent,
       ContactComponent,
       FooterComponent,
-      NavbarComponent],
+      ],
   providers: [TranslatePipe],
 })
 export class AppComponent implements OnInit {
