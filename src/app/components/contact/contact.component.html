@@ -1,21 +1,26 @@
-<section class="contact">
-  <h1>Entre em Contato</h1>
-  <form (ngSubmit)="submitForm()" #contactForm="ngForm">
-    <div class="form-group">
-      <label for="name">Nome</label>
-      <input type="text" id="name" name="name" [(ngModel)]="form.name" required />
+<section class="contact" id="contact">
+  <div class="contact-container">
+    <h1>Entre em Contato</h1>
+    <form (ngSubmit)="submitForm()" #contactForm="ngForm">
+      <!-- Use a form row to place name and email side-by-side on larger screens -->
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Nome</label>
+          <input type="text" id="name" name="name" [(ngModel)]="form.name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" [(ngModel)]="form.email" required />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="message">Mensagem</label>
+        <textarea id="message" name="message" rows="5" [(ngModel)]="form.message" required></textarea>
+      </div>
+      <button type="submit" [disabled]="!contactForm.form.valid">Enviar</button>
+    </form>
+    <div class="confirmation" *ngIf="submitted">
+      <p>Mensagem enviada com sucesso! Entrarei em contato em breve.</p>
     </div>
-    <div class="form-group">
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" [(ngModel)]="form.email" required />
-    </div>
-    <div class="form-group">
-      <label for="message">Mensagem</label>
-      <textarea id="message" name="message" rows="5" [(ngModel)]="form.message" required></textarea>
-    </div>
-    <button type="submit" [disabled]="!contactForm.form.valid">Enviar</button>
-  </form>
-  <div class="confirmation" *ngIf="submitted">
-    <p>Mensagem enviada com sucesso! Entrarei em contato em breve.</p>
   </div>
 </section>

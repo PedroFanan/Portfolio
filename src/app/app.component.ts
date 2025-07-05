@@ -18,6 +18,7 @@ import { HeaderComponent } from './components/header/header.component';
       ProjectsComponent,
       ContactComponent,
       FooterComponent,
+      NavbarComponent
       ],
   providers: [TranslatePipe],
 })

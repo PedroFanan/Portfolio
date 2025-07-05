@@ -1,75 +1,125 @@
-.menu-toggle-btn {
-  position: fixed;
-  top: 1.2rem;
-  left: 1.5rem;
-  z-index: 1002;
-  background: transparent;
-  border: none;
-  font-size: 1.8rem;
-  color: #6e07f3;
+/* Navbar overall styling */
+.navbar {
+  background-color: #121212;  /* dark background for nav */
+  color: #ffffff;
+  width: 100%;
+  position: relative;
+  z-index: 1000;
 }
 
+/* Container for branding and links */
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo text styling */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Desktop nav links */
+.nav-links {
+  list-style: none;
+  display: none;  /* hidden on mobile, shown on desktop via media query */
+  margin: 0;
+  padding: 0;
+}
+.nav-links li {
+  display: inline-block;
+  margin: 0 15px;
+}
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+.nav-links a:hover {
+  color: #f0a500; /* orange accent on hover */
+}
+
+/* Hamburger menu button (mobile only by default) */
+.menu-toggle-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* Sidebar (mobile menu) default hidden off-canvas */
 .sidebar {
   position: fixed;
   top: 0;
-  left: -280px;
-  width: 260px;
+  right: -260px; /* hide off-screen to the right */
   height: 100%;
-  background: white;
-  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
-  transition: left 0.3s ease-in-out;
-  z-index: 1001;
-  padding: 2rem 1.5rem;
-
-  &.open {
-    left: 0;
-  }
-
-  .sidebar-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 2rem;
-  }
-
-  .gradient-text {
-    background: linear-gradient(90deg, #6e07f3, #00c9ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: 700;
-    font-size: 1.25rem;
-  }
-
-  .close-btn {
-    background: transparent;
-    border: none;
-    font-size: 1.4rem;
-  }
-
-  .sidebar-nav {
-    list-style: none;
-    padding-left: 0;
-
-    li {
-      margin-bottom: 1.25rem;
-
-      a {
-        color: #333;
-        text-decoration: none;
-        font-weight: 500;
-        font-size: 1.1rem;
-
-        &:hover {
-          color: #6e07f3;
-        }
-      }
-    }
-  }
+  width: 250px;
+  background-color: #1e1e1e;
+  color: #fff;
+  overflow-y: auto;
+  transition: right 0.3s ease;
+  padding: 20px;
+}
+.sidebar.open {
+  right: 0;  /* slide in when open */
+}
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.sidebar-header .close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+.sidebar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sidebar-nav li {
+  margin: 15px 0;
+}
+.sidebar-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+.sidebar-nav a:hover {
+  color: #f0a500;
 }
 
+/* Overlay behind sidebar when open */
 .sidebar-overlay {
   position: fixed;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.3);
-  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+/* Medium and up: show desktop nav, hide mobile menu */
+@media (min-width: 768px) {
+  .nav-links {
+    display: inline-block; /* show horizontal nav links */
+  }
+  .menu-toggle-btn, 
+  .sidebar, 
+  .sidebar-overlay {
+    display: none !important;  /* hide mobile-specific elements */
+  }
 }
