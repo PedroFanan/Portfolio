@@ -18,6 +18,16 @@ export class ContactComponent {
   submitted = false;
 
   submitForm() {
-    this.submitted = true;
-  }
+  const name = encodeURIComponent(this.form.name);
+  const message = encodeURIComponent(this.form.message);
+
+  const whatsappNumber = '5516989988979';
+
+  const finalMessage = `Olá, meu nome é ${name}. ${message}`;
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${finalMessage}`;
+
+  window.open(whatsappUrl, '_blank');
+  
+  this.submitted = true;
+}
 }

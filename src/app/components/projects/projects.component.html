@@ -3,6 +3,7 @@
     <h1>Meus Projetos</h1>
     <div class="project-list">
       <div class="project-card" *ngFor="let project of projects" (click)="openProject(project)">
+        <img [src]="project.image" alt="{{ project.title }}" />
         <h2>{{ project.title }}</h2>
         <p>{{ project.shortDescription }}</p>
       </div>
@@ -10,12 +11,23 @@
   </div>
 </section>
 
-<!-- Project Details Modal -->
 <div class="project-modal" *ngIf="selectedProject">
   <div class="modal-content">
-    <button class="close-button" (click)="closeModal()">×</button>
-    <h2>{{ selectedProject.title }}</h2>
-    <p>{{ selectedProject.fullDescription }}</p>
-    <a *ngIf="selectedProject.link" [href]="selectedProject.link" target="_blank">Ver Projeto</a>
+    <button class="close-button" (click)="closeModal()">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <div class="modal-body">
+      <div class="modal-image">
+        <img [src]="selectedProject.image" alt="{{ selectedProject.title }}" />
+      </div>
+
+      <div class="modal-text">
+        <h2>{{ selectedProject.title }}</h2>
+        <p>{{ selectedProject.fullDescription }}</p>
+        <!-- <a *ngIf="selectedProject.link" [href]="selectedProject.link" target="_blank">Ver Projeto</a> -->
+      </div>
+    </div>
   </div>
 </div>
+
