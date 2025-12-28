@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "meu-portifolio": {
+    "portifolio": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/meu-portifolio",
+            "outputPath": "dist/portifolio",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -63,10 +63,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "meu-portifolio:build:production"
+              "buildTarget": "portifolio:build:production"
             },
             "development": {
-              "buildTarget": "meu-portifolio:build:development"
+              "buildTarget": "portifolio:build:development"
             }
           },
           "defaultConfiguration": "development"

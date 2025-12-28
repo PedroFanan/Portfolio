@@ -8,5 +8,5 @@ import { ComponentsModule } from '../../module/components.module';
   styleUrl: './about.component.scss',
 })
 export class AboutComponent {
-  title = 'meu-portifolio';
+  title = 'portifolio';
 }
