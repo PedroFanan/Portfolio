@@ -22,7 +22,7 @@ export class ProjectsComponent {
     shortDescription: 'Plataforma web para gerenciamento de alunos, professores e turmas.',
     fullDescription: 'Sistema completo com autenticação, controle de notas, frequência e geração de relatórios, utilizando Angular e Firebase.',
     link: 'https://exemplo.com/escolar',
-    image: 'assets/images/sistema escolar.png'
+    image: 'assets/images/sistema-escolar.png'
   },
   {
     title: 'Aplicação SaaS para Agendamentos',
